@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "534740832221",
+    "project_id": "fir-test-project-f6855",
+    "storage_bucket": "fir-test-project-f6855.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534740832221:android:e22ac4b84ed744e2eab034",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoI9tVh6EAOHJvN0u86CTF8wmSgcdonmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534740832221:android:ebbc40f7e5ae1b64eab034",
+        "android_client_info": {
+          "package_name": "com.example.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoI9tVh6EAOHJvN0u86CTF8wmSgcdonmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

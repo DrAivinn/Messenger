@@ -1,0 +1,16 @@
+<resources>
+    <string name="no_account">Нет аккаунта</string>
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="forgot_your_password">Забыл(а) пароль</string>
+    <string name="registration">Зарегистрироваться</string>
+    <string name="login">ВОЙТИ</string>
+    <string name="confirm_password">Подтвердить пароль</string>
+    <string name="have_an_account">Уже есть аккаунт</string>
+    <string name="search">Поиск</string>
+    <string name="auth">ВОЙТИ С ПОМОЩЬЮ EMAIL</string>
+    <string name="app_name">Messenger</string>
+    <string name="profile">Профиль</string>
+    <string name="about">О приложении</string>
+    <string name="exit">Выход</string>
+</resources>
