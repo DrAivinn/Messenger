@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthFragment"
+    tools:context=".fragments.AuthFragment"
     tools:ignore="MissingClass">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -20,14 +20,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/authBTN"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/blue"
         android:text="@string/auth"
-        app:cornerRadius="2dp"
         app:icon="@drawable/ic_markunread"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,16 +1,35 @@
 <resources>
     <string name="no_account">Нет аккаунта</string>
     <string name="email">Электронная почта</string>
+    <string name="eMail">Email</string>
+    <string name="login_method">Способ входа:</string>
     <string name="password">Пароль</string>
     <string name="forgot_your_password">Забыл(а) пароль</string>
     <string name="registration">Зарегистрироваться</string>
-    <string name="login">ВОЙТИ</string>
+    <string name="login">Войти</string>
     <string name="confirm_password">Подтвердить пароль</string>
     <string name="have_an_account">Уже есть аккаунт</string>
     <string name="search">Поиск</string>
-    <string name="auth">ВОЙТИ С ПОМОЩЬЮ EMAIL</string>
+    <string name="auth">Войти с помощью email</string>
     <string name="app_name">Messenger</string>
     <string name="profile">Профиль</string>
     <string name="about">О приложении</string>
     <string name="exit">Выход</string>
+    <string name="name">Имя</string>
+    <string name="nickname">Псевдоним</string>
+    <string name="surname">Фамилия</string>
+    <string name="occupation">Род занятий</string>
+    <string name="address">Адрес</string>
+    <string name="age">Возраст</string>
+    <string name="save">Сохранить</string>
+    <string name="send">Отправить</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_verified">Не верифицирован</string>
+    <string name="select_image">Выбрать изображение</string>
+    <string name="apply_image">Применить изображение</string>
+    <string name="choose_image_from">Выбрать/Сделать\n изображение из:</string>
+    <string name="gallery">Галереи</string>
+    <string name="camera">Камеры</string>
+
 </resources>

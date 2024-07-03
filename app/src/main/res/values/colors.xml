@@ -5,7 +5,18 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="blue">#036BF4</color>
+
+
+    <color name="blue">#036BF4</color><!-- Синий -->
+    <color name="red">#FF0000</color> <!-- Красный -->
+    <color name="green">#00FF00</color> <!-- Зеленый -->
+    <color name="yellow">#FFFF00</color> <!-- Желтый -->
+    <color name="orange">#FFA500</color> <!-- Оранжевый -->
+    <color name="purple">#800080</color> <!-- Фиолетовый -->
+    <color name="cyan">#00FFFF</color> <!-- Голубой -->
+    <color name="pink">#FFC0CB</color> <!-- Розовый -->
+    <color name="brown">#A52A2A</color> <!-- Коричневый -->
+    <color name="gray">#808080</color> <!-- Серый -->
+    <color name="black">#000000</color> <!-- Черный -->
+    <color name="white">#FFFFFF</color> <!-- Белый -->
 </resources>

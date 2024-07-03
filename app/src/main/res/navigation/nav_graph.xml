@@ -6,15 +6,18 @@
     app:startDestination="@id/authFragment">
     <fragment
         android:id="@+id/authFragment"
-        android:name="com.example.messenger.AuthFragment"
+        android:name="com.example.messenger.fragments.AuthFragment"
         tools:layout="@layout/fragment_auth">
         <action
             android:id="@+id/action_authFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_startFragment"
+            app:destination="@id/startFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.messenger.LoginFragment"
+        android:name="com.example.messenger.fragments.LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registrationFragment"
@@ -22,10 +25,13 @@
         <action
             android:id="@+id/action_loginFragment_to_startFragment"
             app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordRecoveryFragment"
+            app:destination="@id/passwordRecoveryFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.messenger.RegistrationFragment"
+        android:name="com.example.messenger.fragments.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration">
         <action
@@ -34,7 +40,33 @@
     </fragment>
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.messenger.StartFragment"
+        android:name="com.example.messenger.fragments.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" />
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.messenger.fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_changeImageFragment"
+            app:destination="@id/changeImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="com.example.messenger.fragments.PasswordRecoveryFragment"
+        android:label="fragment_password_recovery"
+        tools:layout="@layout/fragment_password_recovery" />
+    <fragment
+        android:id="@+id/changeImageFragment"
+        android:name="com.example.messenger.fragments.ChangeImageFragment"
+        android:label="fragment_change_image"
+        tools:layout="@layout/fragment_change_image" />
 </navigation>

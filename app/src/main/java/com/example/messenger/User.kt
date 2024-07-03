@@ -1,11 +1,14 @@
 package com.example.messenger
 
 data class User(
-    val name: String,
-    val surname: String,
-    val occupation: String,
-    val address: String,
-    val phone: String,
-    val age: Int,
-    val image: Int
+    val uid: String = "",
+    var nickName: String = "",
+    var name: String = "",
+    var surname: String = "",
+    var occupation: String = "",
+    var address: String = "",
+    var phone: String = "",
+    var eMail: String = "",
+    var age: String = "",
+    var imageUri: String = ""
 )

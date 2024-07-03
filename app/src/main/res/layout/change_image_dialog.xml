@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/chooseImageFromTV"
+        style="@style/myTextView"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/choose_image_from"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/galleryIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/cameraIV"
+        app:layout_constraintStart_toStartOf="@+id/chooseImageFromTV"
+        app:layout_constraintTop_toBottomOf="@+id/chooseImageFromTV"
+        app:srcCompat="@drawable/ic_gallery" />
+
+    <ImageView
+        android:id="@+id/cameraIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/galleryIV"
+        app:layout_constraintEnd_toEndOf="@+id/chooseImageFromTV"
+        app:layout_constraintStart_toEndOf="@+id/galleryIV"
+        app:layout_constraintTop_toTopOf="@+id/galleryIV"
+        app:srcCompat="@drawable/ic_camera" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/galleryBTN"
+        style="@style/ButtonStyle"
+        android:text="@string/gallery"
+        app:layout_constraintEnd_toEndOf="@+id/galleryIV"
+        app:layout_constraintStart_toStartOf="@+id/galleryIV"
+        app:layout_constraintTop_toBottomOf="@+id/galleryIV" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cameraBTN"
+        style="@style/ButtonStyle"
+        android:text="@string/camera"
+        app:layout_constraintEnd_toEndOf="@+id/cameraIV"
+        app:layout_constraintStart_toStartOf="@+id/cameraIV"
+        app:layout_constraintTop_toBottomOf="@+id/cameraIV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

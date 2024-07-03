@@ -4,17 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".fragments.LoginFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTIL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/MyTextInputLayout"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:startIconDrawable="@drawable/ic_markunread">
@@ -24,14 +21,13 @@
             android:layout_height="wrap_content"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:paddingStart="48dp" />
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTIL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/MyTextInputLayout"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/emailTIL"
         app:layout_constraintStart_toStartOf="@+id/emailTIL"
@@ -43,49 +39,35 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:paddingStart="48dp" />
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginBTN"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/blue"
+        style="@style/ButtonStyle"
         android:text="@string/login"
-        app:cornerRadius="0dp"
         app:icon="@drawable/ic_login"
         app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/passwordTIL"
         app:layout_constraintTop_toBottomOf="@+id/forgotPasswordTV" />
 
     <TextView
         android:id="@+id/registrationTV"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/myTextView"
         android:gravity="center"
         android:text="@string/registration"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/loginBTN"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/loginBTN"
         app:layout_constraintTop_toBottomOf="@+id/noAccountTV" />
 
     <TextView
         android:id="@+id/forgotPasswordTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/myTextView"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/forgot_your_password"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
         app:layout_constraintTop_toBottomOf="@+id/passwordTIL" />
 

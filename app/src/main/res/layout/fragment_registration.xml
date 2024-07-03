@@ -4,18 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationFragment">
+    tools:context=".fragments.RegistrationFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTIL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        style="@style/MyTextInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/nickNameTIL"
+        app:layout_constraintStart_toStartOf="@+id/nickNameTIL"
+        app:layout_constraintTop_toBottomOf="@+id/nickNameTIL">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -26,9 +22,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTIL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/MyTextInputLayout"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/emailTIL"
         app:layout_constraintStart_toStartOf="@+id/emailTIL"
@@ -43,9 +37,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirmPasswordTIL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/MyTextInputLayout"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
         app:layout_constraintStart_toStartOf="@+id/passwordTIL"
@@ -60,23 +52,33 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registrationBTN"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/ButtonStyle"
         android:text="@string/registration"
-        app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="@+id/confirmPasswordTIL"
         app:layout_constraintStart_toStartOf="@+id/confirmPasswordTIL"
         app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTIL" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/haveAnAccountBTN"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/ButtonStyle"
         android:text="@string/have_an_account"
-        app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="@+id/registrationBTN"
         app:layout_constraintStart_toStartOf="@+id/registrationBTN"
         app:layout_constraintTop_toBottomOf="@+id/registrationBTN" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nickNameTIL"
+        style="@style/MyTextInputLayout"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nickname" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

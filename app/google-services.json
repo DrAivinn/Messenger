@@ -1,65 +1,27 @@
 {
   "project_info": {
-    "project_number": "534740832221",
-    "project_id": "fir-test-project-f6855",
-    "storage_bucket": "fir-test-project-f6855.appspot.com"
+    "project_number": "170169398306",
+    "firebase_url": "https://messenger-b6cdd-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "messenger-b6cdd",
+    "storage_bucket": "messenger-b6cdd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:534740832221:android:e22ac4b84ed744e2eab034",
-        "android_client_info": {
-          "package_name": "com.example.firebaseauthentication"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBoI9tVh6EAOHJvN0u86CTF8wmSgcdonmA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:534740832221:android:ebbc40f7e5ae1b64eab034",
+        "mobilesdk_app_id": "1:170169398306:android:a49bb1d9de89c50b8d467b",
         "android_client_info": {
           "package_name": "com.example.messenger"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBoI9tVh6EAOHJvN0u86CTF8wmSgcdonmA"
+          "current_key": "AIzaSyBslTaQbuRlP-ldMnwNq_aFBCzScl43Ljc"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "534740832221-n03k2k2c4ne3f5cgcd71ll5ct5st9pii.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
