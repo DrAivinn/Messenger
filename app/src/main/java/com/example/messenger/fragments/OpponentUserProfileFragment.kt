@@ -50,6 +50,7 @@ class OpponentUserProfileFragment : BaseFragment<FragmentOpponentUserProfileBind
         startActivity(callIntent)
     }
 
+    @Suppress("DEPRECATION")
     private fun initFields() {
         opponentInfo = arguments?.getParcelable<User>(OPPONENT) ?: User()
         with(binding) {

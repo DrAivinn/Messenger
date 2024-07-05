@@ -60,14 +60,6 @@ suspend fun initUserCoroutine() {
     }
 }
 
-suspend fun initAnotherUserCoroutine(id: String) {
-    val snapshot = refUsersDataBaseRoot.child(id).get().await()
-    if (snapshot.exists()) {
-        opponent = snapshot.getValue(User::class.java) ?: throw Exception("User data is null")
-    } else {
-        throw Exception("User data not found")
-    }
-}
 
 fun setupMessageListener(function: (Message) -> Unit) {
     if (listener == null) {

@@ -20,7 +20,6 @@ import com.example.messenger.utils.refUsersStorageRoot
 import com.example.messenger.utils.showToast
 import com.example.messenger.utils.user
 import com.example.messenger.utils.userImageUri
-import kotlinx.coroutines.time.delay
 
 
 class ChangeImageFragment : BaseFragment<FragmentChangeImageBinding>() {

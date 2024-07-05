@@ -38,5 +38,7 @@
     <string name="sendSMS">Отправить SMS</string>
     <string name="call">Позвонить</string>
     <string name="user_id">Идентификатор</string>
+    <string name="incoming_message">incoming Message</string>
+    <string name="outgoing_message">outgoing Message</string>
 
 </resources>

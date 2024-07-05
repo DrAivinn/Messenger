@@ -10,6 +10,6 @@
         android:layout_margin="5dp"
         android:background="@drawable/message_incoming_background"
         android:padding="5dp"
-        android:text="incoming Message"
+        android:text="@string/incoming_message"
         android:textSize="20sp" />
 </RelativeLayout>
