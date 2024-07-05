@@ -8,8 +8,10 @@
 
 
     <color name="blue">#036BF4</color><!-- Синий -->
+    <color name="light_blue">#4DC6FD</color><!-- Светло синий -->
     <color name="red">#FF0000</color> <!-- Красный -->
     <color name="green">#00FF00</color> <!-- Зеленый -->
+    <color name="light_green">#9AFA9A</color> <!-- Светло зеленый -->
     <color name="yellow">#FFFF00</color> <!-- Желтый -->
     <color name="orange">#FFA500</color> <!-- Оранжевый -->
     <color name="purple">#800080</color> <!-- Фиолетовый -->

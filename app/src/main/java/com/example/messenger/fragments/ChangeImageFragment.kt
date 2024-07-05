@@ -9,9 +9,10 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.example.messenger.databinding.FragmentChangeImageBinding
 import com.example.messenger.utils.ChangeImageDialog
-import com.example.messenger.utils.USER_IMAGE_URI
+import com.example.messenger.utils.USER_IMAGE_URl
 import com.example.messenger.utils.currentUid
 import com.example.messenger.utils.loadImage
 import com.example.messenger.utils.refUsersDataBaseRoot
@@ -19,6 +20,7 @@ import com.example.messenger.utils.refUsersStorageRoot
 import com.example.messenger.utils.showToast
 import com.example.messenger.utils.user
 import com.example.messenger.utils.userImageUri
+import kotlinx.coroutines.time.delay
 
 
 class ChangeImageFragment : BaseFragment<FragmentChangeImageBinding>() {
@@ -47,8 +49,7 @@ class ChangeImageFragment : BaseFragment<FragmentChangeImageBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
+        binding.avatarImageIV.loadImage(user.imageURL)
         binding.selectImageBTN.setOnClickListener {
             if (ContextCompat.checkSelfPermission(
                     requireContext(), android.Manifest.permission.CAMERA
@@ -63,23 +64,33 @@ class ChangeImageFragment : BaseFragment<FragmentChangeImageBinding>() {
                 ChangeImageDialog.showDialog(
                     requireContext(), galleryLauncher, cameraLauncher
                 )
-                binding.avatarImageIV.loadImage(user.imageUri)
+                binding.avatarImageIV.loadImage(user.imageURL)
             }
             binding.applyImage.setOnClickListener {
                 applyImage()
+                findNavController().navigateUp()
             }
         }
     }
 
     private fun applyImage() {
         val path = refUsersStorageRoot.child(currentUid)
-        path.putFile(userImageUri).addOnCompleteListener { task1 ->
-            if (task1.isSuccessful) {
-                refUsersDataBaseRoot.child(currentUid).child(USER_IMAGE_URI)
-                    .setValue(userImageUri.toString())
-                user.imageUri = userImageUri.toString()
+        userImageUri?.let {
+            path.putFile(it).addOnSuccessListener {
+                path.downloadUrl.addOnSuccessListener { uri ->
+                    val downloadURL = uri.toString()
+                    refUsersDataBaseRoot.child(currentUid).child(USER_IMAGE_URl)
+                        .setValue(downloadURL)
+                    user.imageURL = downloadURL
+                }.addOnFailureListener { exception ->
+                    // Обработка ошибки получения URI
+                    println("Error occurred: ${exception.message}")
+                }
+            }.addOnFailureListener { exception ->
+                // Обработка ошибки загрузки файла
+                println("Upload failed: ${exception.message}")
             }
-        }
+        } ?: return
         showToast("Данные обновлены")
     }
 }

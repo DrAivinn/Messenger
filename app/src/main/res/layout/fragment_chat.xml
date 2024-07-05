@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ChatFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChatTB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/toolbarAvatarIV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_user_image"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarChatTB"
+        app:layout_constraintStart_toStartOf="@+id/toolbarChatTB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/toolbarNickNameTV"
+        style="@style/myTextView"
+        android:textColor="@color/white"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarAvatarIV"
+        app:layout_constraintStart_toEndOf="@+id/toolbarAvatarIV"
+        app:layout_constraintTop_toTopOf="@+id/toolbarAvatarIV" />
+
+    <EditText
+        android:id="@+id/messageTextET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/message"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendMessageIV"
+        app:layout_constraintStart_toEndOf="@+id/attachIV" />
+
+    <ImageView
+        android:id="@+id/sendMessageIV"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+
+        android:src="@drawable/ic_send_message"
+        app:layout_constraintBottom_toBottomOf="@+id/messageTextET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messageTextET"
+        app:layout_constraintTop_toTopOf="@+id/messageTextET" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/attachIV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_attach"
+        app:layout_constraintBottom_toBottomOf="@+id/messageTextET"
+        app:layout_constraintEnd_toStartOf="@+id/messageTextET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatRV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+app:stackFromEnd="true"
+        app:layout_constraintBottom_toTopOf="@+id/messageTextET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarChatTB"
+        tools:listitem="@layout/item_message_outgoing"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_startFragment_to_authFragment"
             app:destination="@id/authFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
@@ -69,4 +72,18 @@
         android:name="com.example.messenger.fragments.ChangeImageFragment"
         android:label="fragment_change_image"
         tools:layout="@layout/fragment_change_image" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.messenger.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_someUserProfileFragment"
+            app:destination="@id/someUserProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/someUserProfileFragment"
+        android:name="com.example.messenger.fragments.OpponentUserProfileFragment"
+        android:label="fragment_some_user_profile"
+        tools:layout="@layout/fragment_opponent_user_profile" />
 </navigation>

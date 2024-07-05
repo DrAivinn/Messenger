@@ -7,15 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.navigation.fragment.findNavController
+import com.example.messenger.R
 import com.example.messenger.User
 import com.example.messenger.UsersListRecyclerViewAdapter
 import com.example.messenger.databinding.FragmentUsersListViewPagerBinding
+import com.example.messenger.utils.OPPONENT
 import com.example.messenger.utils.currentUid
 import com.example.messenger.utils.refUsersDataBaseRoot
 import java.util.Locale
 
 class UsersListViewPagerFragment() : BaseFragment<FragmentUsersListViewPagerBinding>() {
-    private val usersListAdapter = UsersListRecyclerViewAdapter()
+    private val usersListAdapter = UsersListRecyclerViewAdapter { onClick(it) }
     private val usersList = mutableListOf<User>()
     override fun getFragmentBinding(
         inflater: LayoutInflater,
@@ -62,5 +65,11 @@ class UsersListViewPagerFragment() : BaseFragment<FragmentUsersListViewPagerBind
 
             override fun afterTextChanged(s: Editable?) {}
         })
+    }
+
+    private fun onClick(user: User) {
+        val bundle = Bundle()
+        bundle.putParcelable(OPPONENT, user)
+        findNavController().navigate(R.id.action_startFragment_to_chatFragment, bundle)
     }
 }

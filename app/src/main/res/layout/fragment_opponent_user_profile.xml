@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OpponentUserProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/sendSMSBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/userProfileTV"
+            style="@style/myTextView"
+            android:layout_gravity="center"
+            android:text="@string/user_profile" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userAvatarIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user_image" />
+
+        <TextView
+            android:id="@+id/userNickNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nickname" />
+
+        <TextView
+            android:id="@+id/userEmailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/eMail" />
+
+        <TextView
+            android:id="@+id/userIdTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/user_id" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/userNameTV"
+            style="@style/myTextView"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/userSurname"
+            style="@style/myTextView"
+            android:text="@string/surname" />
+
+        <TextView
+            android:id="@+id/userOccupationTV"
+            style="@style/myTextView"
+            android:text="@string/occupation" />
+
+        <TextView
+            android:id="@+id/userPhoneTV"
+            style="@style/myTextView"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/userAgeTV"
+            style="@style/myTextView"
+            android:text="@string/age" />
+
+        <TextView
+            android:id="@+id/userAddressTV"
+            style="@style/myTextView"
+            android:text="@string/address" />
+
+        <TextView
+            android:id="@+id/userLoginMethodTV"
+            style="@style/myTextView"
+            android:text="@string/login_method" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/callBTN"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/call"
+        app:icon="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="@+id/sendSMSBTN"
+        app:layout_constraintEnd_toStartOf="@+id/sendSMSBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sendSMSBTN" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendSMSBTN"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sendSMS"
+        app:icon="@drawable/ic_text_sms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/callBTN"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

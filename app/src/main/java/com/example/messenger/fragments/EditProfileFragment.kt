@@ -11,6 +11,7 @@ import com.example.messenger.utils.USER_ADDRESS
 import com.example.messenger.utils.USER_AGE
 import com.example.messenger.utils.USER_NAME
 import com.example.messenger.utils.USER_OCCUPATION
+import com.example.messenger.utils.USER_PHONE
 import com.example.messenger.utils.USER_SURNAME
 import com.example.messenger.utils.currentUid
 import com.example.messenger.utils.loadImage
@@ -26,6 +27,7 @@ class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initFields()
         binding.saveBTN.setOnClickListener { saveInfo() }
         binding.avatarIV.setOnClickListener {
             findNavController().navigate(R.id.action_editProfileFragment_to_changeImageFragment)
@@ -43,7 +45,8 @@ class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
             editOccupationTIL.editText?.setText(user.occupation)
             editAddressTIL.editText?.setText(user.address)
             editAgeTIL.editText?.setText(user.age)
-            avatarIV.loadImage(user.imageUri)
+            editPhoneTIL.editText?.setText(user.phone)
+            avatarIV.loadImage(user.imageURL)
         }
     }
 
@@ -54,22 +57,20 @@ class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
             val occupation = editOccupationTIL.editText?.text.toString()
             val address = editAddressTIL.editText?.text.toString()
             val age = editAgeTIL.editText?.text.toString()
+            val phone = editPhoneTIL.editText?.text.toString()
             val userMap = mutableMapOf<String, Any>(
-                USER_NAME to name, USER_SURNAME to surname,
-                USER_OCCUPATION to occupation, USER_ADDRESS to address, USER_AGE to age
+                USER_NAME to name,
+                USER_SURNAME to surname,
+                USER_OCCUPATION to occupation,
+                USER_ADDRESS to address,
+                USER_AGE to age,
+                USER_PHONE to phone
             )
             refUsersDataBaseRoot.child(currentUid).updateChildren(userMap).addOnCompleteListener {
                 if (it.isSuccessful) showToast("Данные сохранены")
             }
         }
     }
-
-    override fun onStart() {
-        super.onStart()
-        initFields()
-    }
-
-
 }
 
 

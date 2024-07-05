@@ -47,8 +47,9 @@ class StartFragment : BaseFragment<FragmentStartBinding>() {
                         auth.signOut()
                         findNavController().navigate(R.id.action_startFragment_to_authFragment)
                     }
+
                     R.id.menu_about -> {}
-                    R.id.menu_profile -> {
+                    R.id.menu_open_profile -> {
                         findNavController().navigate(R.id.action_startFragment_to_editProfileFragment)
                     }
                 }

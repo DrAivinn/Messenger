@@ -2,7 +2,7 @@
     <string name="no_account">Нет аккаунта</string>
     <string name="email">Электронная почта</string>
     <string name="eMail">Email</string>
-    <string name="login_method">Способ входа:</string>
+    <string name="login_method">Способ входа</string>
     <string name="password">Пароль</string>
     <string name="forgot_your_password">Забыл(а) пароль</string>
     <string name="registration">Зарегистрироваться</string>
@@ -21,6 +21,7 @@
     <string name="occupation">Род занятий</string>
     <string name="address">Адрес</string>
     <string name="age">Возраст</string>
+    <string name="phone">Номер телефона</string>
     <string name="save">Сохранить</string>
     <string name="send">Отправить</string>
 
@@ -31,5 +32,11 @@
     <string name="choose_image_from">Выбрать/Сделать\n изображение из:</string>
     <string name="gallery">Галереи</string>
     <string name="camera">Камеры</string>
+    <string name="open_profile">Посетить профиль</string>
+    <string name="message">Сообщение</string>
+    <string name="user_profile">Профиль пользователя</string>
+    <string name="sendSMS">Отправить SMS</string>
+    <string name="call">Позвонить</string>
+    <string name="user_id">Идентификатор</string>
 
 </resources>

@@ -18,6 +18,7 @@ class AuthFragment : BaseFragment<FragmentAuthBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         Log.d("myLOG", "auth")
         if (auth.currentUser != null) findNavController().navigate(R.id.action_authFragment_to_startFragment)
         binding.authBTN.setOnClickListener {

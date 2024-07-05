@@ -9,10 +9,12 @@ import com.example.messenger.R
 fun Fragment.showToast(message: String) {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }
-fun ImageView.loadImage(uri: String) {
+
+fun ImageView.loadImage(url: String) {
     Glide.with(this)
-        .load(uri)
+        .load(url)
         .placeholder(R.drawable.ic_user_image)
+        .fitCenter()
         .into(this)
 }
 

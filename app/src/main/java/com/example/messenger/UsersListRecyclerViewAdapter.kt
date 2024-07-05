@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.messenger.databinding.UsersListItemBinding
 import com.example.messenger.utils.loadImage
 
-class UsersListRecyclerViewAdapter :
+class UsersListRecyclerViewAdapter(val onClick: (User) -> Unit) :
     RecyclerView.Adapter<UsersListRecyclerViewAdapter.UsersListViewHolder>() {
     class UsersListViewHolder(val binding: UsersListItemBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -33,7 +33,8 @@ class UsersListRecyclerViewAdapter :
         with(holder.binding) {
             val user = usersList[position]
             userNickNameTV.text = user.nickName
-            userImageIV.loadImage(user.imageUri)
+            userImageIV.loadImage(user.imageURL)
+            root.setOnClickListener { onClick(user) }
         }
     }
 }
