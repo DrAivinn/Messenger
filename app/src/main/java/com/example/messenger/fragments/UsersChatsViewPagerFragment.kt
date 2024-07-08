@@ -71,7 +71,7 @@ class UsersChatsViewPagerFragment() : BaseFragment<FragmentUsersChatsViewPagerBi
         findNavController().navigate(R.id.action_startFragment_to_chatFragment, bundle)
     }
 
-    fun getUsersIDs() {
+    private fun getUsersIDs() {
         messageListener = AddChildEventListener { snapShot ->
             snapShot.children.forEach {
                 keys.add(it.key.toString())
