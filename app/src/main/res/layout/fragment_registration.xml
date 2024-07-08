@@ -8,7 +8,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/nickNameTIL"
         app:layout_constraintStart_toStartOf="@+id/nickNameTIL"
         app:layout_constraintTop_toBottomOf="@+id/nickNameTIL">
@@ -22,7 +22,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/emailTIL"
         app:layout_constraintStart_toStartOf="@+id/emailTIL"
@@ -37,7 +37,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirmPasswordTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
         app:layout_constraintStart_toStartOf="@+id/passwordTIL"
@@ -52,7 +52,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registrationBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:text="@string/registration"
         app:layout_constraintEnd_toEndOf="@+id/confirmPasswordTIL"
         app:layout_constraintStart_toStartOf="@+id/confirmPasswordTIL"
@@ -60,7 +60,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/haveAnAccountBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:text="@string/have_an_account"
         app:layout_constraintEnd_toEndOf="@+id/registrationBTN"
         app:layout_constraintStart_toStartOf="@+id/registrationBTN"
@@ -68,7 +68,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nickNameTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"

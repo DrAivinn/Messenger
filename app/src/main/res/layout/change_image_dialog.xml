@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/chooseImageFromTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:layout_margin="@dimen/fab_margin"
         android:text="@string/choose_image_from"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/galleryBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:text="@string/gallery"
         app:layout_constraintEnd_toEndOf="@+id/galleryIV"
         app:layout_constraintStart_toStartOf="@+id/galleryIV"
@@ -45,7 +45,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cameraBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:text="@string/camera"
         app:layout_constraintEnd_toEndOf="@+id/cameraIV"
         app:layout_constraintStart_toStartOf="@+id/cameraIV"

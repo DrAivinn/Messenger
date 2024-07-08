@@ -8,7 +8,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/emailTIL"
         app:layout_constraintStart_toStartOf="@+id/emailTIL"
@@ -46,7 +46,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:text="@string/login"
         app:icon="@drawable/ic_login"
         app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/registrationTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:gravity="center"
         android:text="@string/registration"
         app:layout_constraintEnd_toEndOf="@+id/loginBTN"
@@ -64,7 +64,7 @@
 
     <TextView
         android:id="@+id/forgotPasswordTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/forgot_your_password"

@@ -4,9 +4,6 @@ import android.net.Uri
 import com.example.messenger.Message
 import com.example.messenger.User
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -30,7 +27,7 @@ const val USER_PHONE = "phone"
 const val USER_EMAIL = "eMail"
 const val USER_AGE = "age"
 const val USER_IMAGE_URl = "imageURL"
-var listener: ChildEventListener? = null
+
 var userImageUri: Uri? = null
 lateinit var currentUid: String
 lateinit var auth: FirebaseAuth
@@ -60,36 +57,14 @@ suspend fun initUserCoroutine() {
     }
 }
 
-
-fun setupMessageListener(function: (Message) -> Unit) {
-    if (listener == null) {
-        listener = object : ChildEventListener {
-            override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-                val message = snapshot.getValue(Message::class.java)
-                if (message != null) {
-                    function(message)
-                }
-            }
-
-            override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {}
-            override fun onChildRemoved(snapshot: DataSnapshot) {}
-            override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {}
-            override fun onCancelled(error: DatabaseError) {}
-        }
-        // Добавляем слушатель к базе данных
-        refUserChatRoot = refUsersMessagesRoot.child(user.nickName + user.uid)
-            .child(opponent.nickName + opponent.uid)
-        refUserChatRoot.addChildEventListener(listener as ChildEventListener)
-    }
-}
-
 fun sendMessage(text: String) {
-    val message = Message(user.nickName, text)
     val messageRoot = refUsersMessagesRoot.push().key.toString()
+    val message = Message(messageRoot, user.nickName, text)
+
     refUserChatRoot.child(messageRoot).setValue(message)
     refUsersMessagesRoot
-        .child(opponent.nickName + opponent.uid)
-        .child(user.nickName + user.uid)
+        .child(opponent.uid)
+        .child(user.uid)
         .child(messageRoot)
         .setValue(message)
 }

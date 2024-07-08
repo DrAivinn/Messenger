@@ -19,7 +19,7 @@
 
         <TextView
             android:id="@+id/userProfileTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:layout_gravity="center"
             android:text="@string/user_profile" />
 
@@ -57,43 +57,43 @@
 
         <TextView
             android:id="@+id/userNameTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/name" />
 
         <TextView
             android:id="@+id/userSurname"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/surname" />
 
         <TextView
             android:id="@+id/userOccupationTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/occupation" />
 
         <TextView
             android:id="@+id/userPhoneTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/phone" />
 
         <TextView
             android:id="@+id/userAgeTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/age" />
 
         <TextView
             android:id="@+id/userAddressTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/address" />
 
         <TextView
             android:id="@+id/userLoginMethodTV"
-            style="@style/myTextView"
+            style="@style/myTextViewStyle"
             android:text="@string/login_method" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/callBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="0dp"
@@ -108,7 +108,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sendSMSBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:layout_width="0dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="8dp"

@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/nickNameTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:layout_marginBottom="8dp"
         android:text="@string/nickname"
         app:layout_constraintBottom_toTopOf="@+id/emailTV"
@@ -41,7 +41,7 @@
 
     <TextView
         android:id="@+id/emailTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:text="@string/eMail"
         app:layout_constraintBottom_toTopOf="@+id/loginMethodTV"
         app:layout_constraintEnd_toEndOf="@+id/loginMethodTV"
@@ -49,7 +49,7 @@
 
     <TextView
         android:id="@+id/loginMethodTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:text="@string/login_method"
         app:layout_constraintBottom_toTopOf="@+id/verificationBTN"
         app:layout_constraintEnd_toEndOf="@+id/verificationBTN"
@@ -68,7 +68,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/verificationBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:text="@string/not_verified"
         app:layout_constraintBottom_toTopOf="@+id/editNameTIL"
         app:layout_constraintEnd_toEndOf="@+id/editNameTIL"
@@ -76,7 +76,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editNameTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/editSurnameTIL"
         app:layout_constraintStart_toStartOf="@+id/editSurnameTIL"
         app:layout_constraintTop_toBottomOf="@+id/verificationBTN">
@@ -89,7 +89,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editSurnameTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/editOccupationTIL"
         app:layout_constraintStart_toStartOf="@+id/editOccupationTIL"
         app:layout_constraintTop_toBottomOf="@+id/editNameTIL">
@@ -102,7 +102,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editOccupationTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/editAddressTIL"
         app:layout_constraintStart_toStartOf="@+id/editAddressTIL"
         app:layout_constraintTop_toBottomOf="@+id/editSurnameTIL">
@@ -115,7 +115,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editAddressTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/editAgeTIL"
         app:layout_constraintStart_toStartOf="@+id/editAgeTIL"
         app:layout_constraintTop_toBottomOf="@+id/editOccupationTIL">
@@ -128,7 +128,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editAgeTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/editPhoneTIL"
         app:layout_constraintStart_toStartOf="@+id/editPhoneTIL"
         app:layout_constraintTop_toBottomOf="@+id/editAddressTIL">
@@ -141,7 +141,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editPhoneTIL"
-        style="@style/MyTextInputLayout"
+        style="@style/MyTextInputLayoutStyle"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +156,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveBTN"
-        style="@style/ButtonStyle"
+        style="@style/MyButtonStyle"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"

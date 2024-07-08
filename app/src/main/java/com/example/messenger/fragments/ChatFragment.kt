@@ -9,17 +9,19 @@ import com.example.messenger.ChatRecyclerViewAdapter
 import com.example.messenger.Message
 import com.example.messenger.R
 import com.example.messenger.databinding.FragmentChatBinding
+import com.example.messenger.utils.AddChildEventListener
 import com.example.messenger.utils.OPPONENT
-import com.example.messenger.utils.listener
 import com.example.messenger.utils.loadImage
 import com.example.messenger.utils.opponent
 import com.example.messenger.utils.refUserChatRoot
+import com.example.messenger.utils.refUsersMessagesRoot
 import com.example.messenger.utils.sendMessage
-import com.example.messenger.utils.setupMessageListener
+import com.example.messenger.utils.user
+import com.google.firebase.database.ChildEventListener
 
 class ChatFragment : BaseFragment<FragmentChatBinding>() {
-    val messageList = mutableListOf<Message>()
-    val chatAdapter = ChatRecyclerViewAdapter()
+    private lateinit var listener: ChildEventListener
+
 
     override fun getFragmentBinding(
         inflater: LayoutInflater, container: ViewGroup?
@@ -30,8 +32,8 @@ class ChatFragment : BaseFragment<FragmentChatBinding>() {
         @Suppress("DEPRECATION")
         opponent = arguments?.getParcelable(OPPONENT)!!
         initToolbar()
+        initRecyclerView()
         with(binding) {
-            binding.chatRV.adapter = chatAdapter
             sendMessageIV.setOnClickListener {
                 val text = messageTextET.text.toString()
                 messageTextET.text.clear()
@@ -58,25 +60,27 @@ class ChatFragment : BaseFragment<FragmentChatBinding>() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        messageList.clear()
-        setupMessageListener {
-            messageList.add(it)
-            chatAdapter.updateList(messageList)
-            binding.chatRV.scrollToPosition(messageList.size - 1)
+    private fun initRecyclerView() {
+
+        val chatAdapter = ChatRecyclerViewAdapter()
+        binding.chatRV.adapter = chatAdapter
+        refUserChatRoot = refUsersMessagesRoot.child(user.uid).child(opponent.uid)
+        listener = AddChildEventListener {
+            val message = it.getValue(Message::class.java)
+            if (message != null) {
+                chatAdapter.updateList(message)
+                binding.chatRV.scrollToPosition(chatAdapter.itemCount - 1)
+            }
         }
+        refUserChatRoot.addChildEventListener(listener as AddChildEventListener)
+
     }
 
     override fun onStop() {
         super.onStop()
         // Удаление слушателя при остановке фрагмента
-        listener?.let {
-            refUserChatRoot.removeEventListener(it)
-        }
-        listener = null
+        refUserChatRoot.removeEventListener(listener)
     }
-
 }
 
 

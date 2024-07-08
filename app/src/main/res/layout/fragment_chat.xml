@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/toolbarNickNameTV"
-        style="@style/myTextView"
+        style="@style/myTextViewStyle"
         android:textColor="@color/white"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarAvatarIV"
@@ -72,15 +72,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRV"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:padding="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-app:stackFromEnd="true"
+        app:stackFromEnd="true"
         app:layout_constraintBottom_toTopOf="@+id/messageTextET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarChatTB"
-        tools:listitem="@layout/item_message_outgoing"/>
+        tools:listitem="@layout/item_message_outgoing"
+        style="@style/myRecyclerViewStyle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

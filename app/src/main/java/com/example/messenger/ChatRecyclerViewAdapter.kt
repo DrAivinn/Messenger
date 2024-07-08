@@ -1,6 +1,5 @@
 package com.example.messenger
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -18,12 +17,12 @@ class ChatRecyclerViewAdapter() :
     class IncomingMessageViewHolder(val binding: ItemMessageIncomingBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    private var messageList: List<Message> = emptyList()
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun updateList(list: List<Message>) {
-        messageList = list
-        notifyDataSetChanged()
+    private val messageList = mutableListOf<Message>()
+    fun updateList(message: Message) {
+        if (!messageList.contains(message)) {
+            messageList.add(message)
+            notifyItemInserted(itemCount)
+        }
     }
 
     override fun getItemViewType(position: Int) =

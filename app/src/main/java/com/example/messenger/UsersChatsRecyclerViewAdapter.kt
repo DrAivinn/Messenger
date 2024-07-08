@@ -4,12 +4,13 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.messenger.databinding.UsersListItemBinding
+import com.example.messenger.databinding.UsersChatsItemBinding
 import com.example.messenger.utils.loadImage
 
-class UsersListRecyclerViewAdapter(val onClick: (User) -> Unit) :
-    RecyclerView.Adapter<UsersListRecyclerViewAdapter.UsersListViewHolder>() {
-    class UsersListViewHolder(val binding: UsersListItemBinding) :
+
+class UsersChatsRecyclerViewAdapter(val onClick: (User) -> Unit) :
+    RecyclerView.Adapter<UsersChatsRecyclerViewAdapter.UsersChatsViewHolder>() {
+    class UsersChatsViewHolder(val binding: UsersChatsItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     private var usersList = mutableListOf<User>()
@@ -20,14 +21,14 @@ class UsersListRecyclerViewAdapter(val onClick: (User) -> Unit) :
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersListViewHolder {
-        val binding = UsersListItemBinding.inflate(LayoutInflater.from(parent.context))
-        return UsersListViewHolder(binding)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersChatsViewHolder {
+        val binding = UsersChatsItemBinding.inflate(LayoutInflater.from(parent.context))
+        return UsersChatsViewHolder(binding)
     }
 
     override fun getItemCount() = usersList.size
 
-    override fun onBindViewHolder(holder: UsersListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UsersChatsViewHolder, position: Int) {
         with(holder.binding) {
             val user = usersList[position]
             userNickNameTV.text = user.nickName
