@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.messenger.User
+import com.example.messenger.models.User
 import com.example.messenger.databinding.FragmentOpponentUserProfileBinding
 import com.example.messenger.utils.OPPONENT
 import com.example.messenger.utils.loadImage

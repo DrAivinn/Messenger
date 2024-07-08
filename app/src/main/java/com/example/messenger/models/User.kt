@@ -1,4 +1,4 @@
-package com.example.messenger
+package com.example.messenger.models
 
 import android.os.Parcel
 import android.os.Parcelable

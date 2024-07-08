@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 import com.example.messenger.R
-import com.example.messenger.User
-import com.example.messenger.UsersListRecyclerViewAdapter
+import com.example.messenger.models.User
+import com.example.messenger.adapters.UsersListRecyclerViewAdapter
 import com.example.messenger.databinding.FragmentUsersListViewPagerBinding
 import com.example.messenger.utils.AddChildEventListener
 import com.example.messenger.utils.OPPONENT

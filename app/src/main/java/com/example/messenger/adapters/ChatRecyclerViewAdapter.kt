@@ -1,10 +1,11 @@
-package com.example.messenger
+package com.example.messenger.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.messenger.databinding.ItemMessageIncomingBinding
 import com.example.messenger.databinding.ItemMessageOutgoingBinding
+import com.example.messenger.models.Message
 import com.example.messenger.utils.TYPE_INCOMING
 import com.example.messenger.utils.TYPE_OUTGOING
 import com.example.messenger.utils.user

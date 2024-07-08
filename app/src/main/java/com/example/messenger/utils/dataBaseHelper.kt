@@ -1,8 +1,8 @@
 package com.example.messenger.utils
 
 import android.net.Uri
-import com.example.messenger.Message
-import com.example.messenger.User
+import com.example.messenger.models.Message
+import com.example.messenger.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

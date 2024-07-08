@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.messenger.R
-import com.example.messenger.ViewPagerAdapter
+import com.example.messenger.adapters.ViewPagerAdapter
 import com.example.messenger.databinding.FragmentStartBinding
 import com.example.messenger.utils.auth
 import com.example.messenger.utils.initUserCoroutine

@@ -1,4 +1,4 @@
-package com.example.messenger
+package com.example.messenger.models
 
 data class Message(
     val id: String = "",

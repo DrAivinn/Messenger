@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.messenger.R
-import com.example.messenger.User
-import com.example.messenger.UsersChatsRecyclerViewAdapter
+import com.example.messenger.models.User
+import com.example.messenger.adapters.UsersChatsRecyclerViewAdapter
 import com.example.messenger.databinding.FragmentUsersChatsViewPagerBinding
 import com.example.messenger.utils.AddChildEventListener
 import com.example.messenger.utils.OPPONENT

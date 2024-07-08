@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.messenger.ChatRecyclerViewAdapter
-import com.example.messenger.Message
+import com.example.messenger.adapters.ChatRecyclerViewAdapter
+import com.example.messenger.models.Message
 import com.example.messenger.R
 import com.example.messenger.databinding.FragmentChatBinding
 import com.example.messenger.utils.AddChildEventListener
